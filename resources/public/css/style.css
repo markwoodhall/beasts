@@ -1,0 +1,91 @@
+/* some style */
+body {
+  background-color:#333;
+}
+
+.clear {
+  clear: both;
+}
+
+h1.beast-name {
+  color:#EB9725;
+  margin-top: 38px;
+  text-align:center;
+  margin-bottom: 1px;
+}
+
+h2.score {
+  float:clear;
+  color:#fff;
+  background-image:url('../images/bg.jpg');
+  padding:8px;
+  margin:1px;
+  border:1px solid #333333;
+  border-radius: 15px 15px 15px 15px;
+}
+
+h2.score > span {
+  float:right;
+  padding-right:10px;
+  color:#000;
+}
+
+.beast {
+  height:498px;
+  position: relative;
+  float:left;
+  width:328px;
+  margin:4px;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: transform 0.3s;
+}
+
+.front {
+  float:right;
+  height:498px;
+  width:328px;
+  box-shadow: -2px 2px 2px #aaa;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.back {
+  height:314px;
+  width:322px;
+  padding:180px 0px 0px 2px;
+  background-position-x:10px;
+  background-position-y:28px;
+  background-repeat:no-repeat;
+  background-image:url('../images/card.png');
+  border:2px solid #CCC;
+  box-shadow: -2px 2px 2px #aaa;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  background-color: #333;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.front.flipped {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  opacity: 0.1;
+}
+
+.back.flipped {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
