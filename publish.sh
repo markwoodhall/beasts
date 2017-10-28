@@ -10,3 +10,4 @@ git push origin deploy
 git push deploy deploy:master
 git push deploy2 deploy:master
 rm -rf ../public
+git checkout master
