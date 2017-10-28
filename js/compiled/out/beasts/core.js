@@ -159,4 +159,4 @@ beasts.core.on_js_reload = (function beasts$core$on_js_reload(){
 return cljs.core.swap_BANG_.call(null,beasts.core.app_state,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"beasts","beasts",-846459732)], null),beasts.data.all_beasts);
 });
 
-//# sourceMappingURL=core.js.map?rel=1509220037246
+//# sourceMappingURL=core.js.map?rel=1509220578607
