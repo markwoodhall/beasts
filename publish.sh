@@ -2,7 +2,7 @@
 
 lein cljsbuild once
 cp -r resources/* ../
-git checkout -b deploy
+git checkout deploy
 cp -r ../public/* ./
 git add .
 git commit . -m "Publish"
