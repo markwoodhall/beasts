@@ -1,7 +1,7 @@
 #!/bin/sh
 
 lein cljsbuild once
-cp -r resources/public/* ../public/
+cp -r resources/* ../
 git checkout -b deploy
 cp -r ../public/* ./
 git add .
