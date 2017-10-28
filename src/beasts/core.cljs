@@ -18,7 +18,8 @@
 
 (defn search-beasts
   [search beasts]
-  (map #(assoc % :visible? (includes? (lower-case (name (:beast-name %))) (lower-case search))) beasts))
+  (let [search-lower (lower-case search)]
+    (map #(assoc % :visible? (includes? (lower-case (name (:beast-name %))) search-lower)) beasts)))
 
 (defn filter-beasts
   [filters filter-key beasts]
@@ -34,9 +35,11 @@
     (reverse (sort-by sort-key beasts))))
 
 (defn beast-title
-  [{:keys [beast-name]}]
+  [{:keys [beast-name allegiance]}]
   [:h1.beast-name
-   (upper-case (name beast-name))])
+   (upper-case (name beast-name))
+   [:img 
+    {:src (str "images/" (name allegiance) ".png") :width "18px" }]])
 
 (defn beast-attribute
   [desc value]
@@ -48,10 +51,11 @@
 (defn front-beast-view
   [{:keys [card-visible? image beast-name]}]
   [:div
-   {:class (if card-visible? "front flipped" "front")
+   {:class 
+    (if card-visible? "front flipped" "front")
     :key (str "default" beast-name)
     :style
-    {:background-image (str "url('" image "')")}}])
+    {:background-image (str "url('" image "')") :background-size "cover"}}])
 
 (defn visible-beast-view
   [{:keys [card-visible? beast-name power age size magic-level fright-factor] :as beast}]
@@ -100,73 +104,66 @@
      
 (defn render-search
   [app]
-  [:div 
-   {:style {:margin-left "auto" :margin-right "auto" :width "1020px" }}
+  [:div.search
    [:input 
     {:on-change (partial search app) 
      :key "search"
      :type "text" 
-     :placeholder "Search for a beast!"
-     :style 
-     {:height "40px" :font-size "28px" :width "980px"
-      :padding "4px 4px" :margin-bottom "30px"}}]])
+     :placeholder "Search for a beast!"}]]) 
 
 (defn render-filters
   [app beasts]
-  [:div 
-   {:style {:margin-left "auto" :margin-right "auto" :width "1000px" }}
+  [:div.filters 
    (let [series (sort-by identity (distinct (map :series beasts)))
          state @app]
      (map (fn [s] [:input
                    (let [filters (:filters state)
-                         background (if (some #{s} filters) "#EB9725" "")]
+                         css-class (if (some #{s} filters) "selected" "")]
                      {:on-click (partial toggle-series-filter app s)
                       :key (str "filter" s)
                       :type "button" :value (str "Series "  s)
-                      :style 
-                      {:font-size "28px" :padding "2px" 
-                       :margin "8px" :background-color background}})]) series))])
+                      :class css-class})]) series))])
 
 (defn render-sorts
   [app beasts]
-  [:div 
-   {:style {:margin-left "auto" :margin-right "auto" :width "1000px" }}
-   (let [attributes [:age :size :power :magic-level :fright-factor :total]
+  [:div.sorts 
+   (let [attributes [:age :size :power :magic-level :fright-factor :total :allegiance]
          state @app]
      (map (fn [s] [:input
                    (let [srt-by (:sort-by state)
-                         background (if (= srt-by s) "#EB9725" "")]
+                         css-class (if (= srt-by s) "selected" "")]
                      {:on-click (partial toggle-sort app s)
                       :key (str "sort" s)
                       :type "button" :value (str "Sort by "  (name s))
-                      :style 
-                      {:font-size "28px" :padding "2px" 
-                       :margin "8px" :background-color background}})]) attributes))])
+                      :class css-class})]) attributes))])
 
 (defn beasts 
   [app]
   (let [{:keys [title beasts]} @app]
-    [:div 
-     {:key "main"
-      :style 
-      {:margin-left "auto" :margin-right "auto" :width "95%"}} 
-     [:div 
-      {:style 
-       { :margin-left "auto" :margin-right "auto" :padding "20px" 
-        :margin-bottom "20px" :width "250px"}} 
+    [:div.main
+     {:key "main"}
+     [:div.logo 
       [:img {:src "images/card.png" }]]
-     (render-search app)
+     [:div.cp 
+      (render-search app)
      [:div 
       {:key "filters"}
+      [:div.intro 
+       [:div.text
+        [:p "Hi, I'm Tom!"] 
+        [:p "I'm on a secret quest to battle Malvel and his evil beasts across Avantia and beyond!"]
+        [:p "Help me find the strongest and most ferocious beasts as we go on this journey together!"]
+        [:p "Good luck!"]]]
       (render-filters app beasts)]
      [:div 
       {:key "sorts"}
-      (render-sorts app beasts)]
-     [:div 
-      {:key "beasts"
-       :style 
-       {:margin-left "auto" :margin-right "auto" :margin-top "50px" :width "1030px"}} 
+      (render-sorts app beasts)]]
+     [:div.beasts
+      {:key "beasts"} 
       (map (partial render-beast app) beasts)]]))
 
 (defonce element (. js/document (getElementById "app")))
 (r/render-component [beasts app-state] element)
+
+(defn on-js-reload []
+  (swap! app-state update-in [:beasts] all-beasts))

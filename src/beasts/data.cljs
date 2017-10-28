@@ -8,6 +8,7 @@
     :size 465
     :magic-level 180
     :fright-factor 91
+    :allegiance :good
     :series 1
     :book 1
     :visible? true
@@ -19,6 +20,7 @@
     :size 300
     :magic-level 176
     :fright-factor 83
+    :allegiance :good
     :series 1
     :book 2
     :visible? true
@@ -30,6 +32,7 @@
     :size 480
     :magic-level 120
     :fright-factor 65
+    :allegiance :good
     :series 1
     :book 3
     :visible? true
@@ -41,6 +44,7 @@
     :size 100
     :magic-level 114
     :fright-factor 58
+    :allegiance :good
     :series 1
     :book 4
     :image-visible? true
@@ -52,6 +56,7 @@
     :age 335
     :size 265
     :magic-level 131
+    :allegiance :good
     :series 1
     :book 5
     :fright-factor 73
@@ -64,6 +69,7 @@
     :size 240
     :magic-level 192
     :fright-factor 92
+    :allegiance :good
     :series 1
     :book 6
     :visible? true
@@ -75,6 +81,7 @@
     :size 270
     :magic-level 145
     :fright-factor 65
+    :allegiance :evil
     :series 2
     :book 1
     :visible? true
@@ -86,6 +93,7 @@
     :size 200
     :magic-level 134
     :fright-factor 68
+    :allegiance :evil
     :series 2
     :book 2
     :visible? true
@@ -97,6 +105,7 @@
     :size 107
     :magic-level 184
     :fright-factor 72
+    :allegiance :evil
     :series 2
     :book 3
     :visible? true
@@ -108,6 +117,7 @@
     :size 260
     :magic-level 123
     :fright-factor 75
+    :allegiance :evil
     :series 2
     :book 4
     :visible? true
@@ -119,6 +129,7 @@
    :size 268
    :magic-level 142
    :fright-factor 78
+   :allegiance :evil
    :series 2
    :book 5
    :visible? true
@@ -130,6 +141,7 @@
    :size 115
    :magic-level 193
    :fright-factor 85
+   :allegiance :evil
    :series 2
    :book 6
    :visible? true
@@ -141,6 +153,7 @@
    :size 144
    :magic-level 126
    :fright-factor 74
+   :allegiance :evil
    :series 3
    :book 1
    :visible? true
@@ -152,6 +165,7 @@
    :size 160
    :magic-level 132
    :fright-factor 78
+   :allegiance :evil
    :series 3
    :book 2
    :visible? true
@@ -163,6 +177,7 @@
    :size 310
    :magic-level 146
    :fright-factor 87
+   :allegiance :evil
    :series 3
    :book 3
    :visible? true
@@ -175,6 +190,7 @@
    :magic-level 157
    :fright-factor 85
    :series 3
+   :allegiance :evil
    :book 4
    :visible? true
    :card-visible? false}
@@ -185,6 +201,7 @@
    :size 296
    :magic-level 161
    :fright-factor 70
+   :allegiance :evil
    :series 3
    :book 5
    :visible? true
@@ -197,6 +214,7 @@
    :magic-level 162
    :fright-factor 71
    :series 3
+   :allegiance :evil
    :book 6
    :visible? true
    :card-visible? false}
@@ -207,6 +225,7 @@
    :size 160
    :magic-level 176
    :fright-factor 90
+   :allegiance :evil
    :series 4
    :book 1
    :visible? true
@@ -218,6 +237,7 @@
    :size 160
    :magic-level 181
    :fright-factor 85
+   :allegiance :evil
    :series 4
    :book 2
    :visible? true
@@ -229,6 +249,7 @@
    :size 300
    :magic-level 154
    :fright-factor 81
+   :allegiance :evil
    :series 4
    :book 3
    :visible? true
@@ -239,6 +260,7 @@
    :age 257
    :size 132
    :magic-level 183
+   :allegiance :evil
    :fright-factor 84
    :series 4
    :book 4
@@ -250,6 +272,7 @@
    :age 313
    :size 320
    :magic-level 187
+   :allegiance :evil
    :fright-factor 90
    :series 4
    :book 5
@@ -262,8 +285,597 @@
    :size 155
    :magic-level 150
    :fright-factor 89
+   :allegiance :evil
    :series 4
    :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :krabb 
+   :image "images/krabb.jpg"
+   :power 190
+   :age 261
+   :size 277
+   :magic-level 184
+   :fright-factor 88
+   :allegiance :good
+   :series 5
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :hawkite 
+   :image "images/hawkite.jpg"
+   :power 211
+   :age 457
+   :size 260
+   :magic-level 159
+   :fright-factor 89
+   :series 5
+   :allegiance :good
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :rokk 
+   :image "images/rokk.jpg"
+   :power 250
+   :age 324
+   :size 470
+   :magic-level 150
+   :fright-factor 87
+   :allegiance :good
+   :series 5
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :koldo 
+   :image "images/koldo.jpg"
+   :power 183
+   :age 335
+   :size 115
+   :magic-level 166
+   :fright-factor 84
+   :allegiance :good
+   :series 5
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :trema 
+   :image "images/trema.jpg"
+   :power 178
+   :age 406
+   :size 306
+   :magic-level 178
+   :fright-factor 95
+   :allegiance :good
+   :series 5
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :amictus 
+   :image "images/amictus.jpg"
+   :power 199
+   :age 288
+   :size 291
+   :magic-level 189
+   :fright-factor 92
+   :allegiance :good
+   :series 5
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :komodo 
+   :image "images/komodo.jpg"
+   :power 222
+   :age 281
+   :size 308
+   :magic-level 144
+   :fright-factor 74
+   :allegiance :evil
+   :series 6
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :muro 
+   :image "images/muro.jpg"
+   :power 243
+   :age 300
+   :size 230
+   :magic-level 156
+   :fright-factor 82
+   :allegiance :evil
+   :series 6
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :fang 
+   :image "images/fang.jpg"
+   :power 253
+   :age 265
+   :size 266
+   :magic-level 172
+   :fright-factor 77
+   :allegiance :evil
+   :series 6
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :murk 
+   :image "images/murk.jpg"
+   :power 212
+   :age 271
+   :size 241
+   :magic-level 181
+   :fright-factor 87
+   :allegiance :evil
+   :series 6
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :terra 
+   :image "images/terra.jpg"
+   :power 263
+   :age 312
+   :size 260
+   :magic-level 168
+   :fright-factor 72
+   :allegiance :evil
+   :series 6
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :vespick 
+   :image "images/vespick.jpg"
+   :power 253
+   :age 285
+   :size 127
+   :allegiance :evil
+   :magic-level 173
+   :fright-factor 83
+   :series 6
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :convol 
+   :image "images/convol.jpg"
+   :power 230
+   :age 300
+   :size 244
+   :magic-level 171
+   :fright-factor 81
+   :allegiance :good
+   :series 7
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :hellion 
+   :image "images/hellion.jpg"
+   :power 235
+   :age 297
+   :size 132
+   :magic-level 159
+   :fright-factor 82
+   :allegiance :good
+   :series 7
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :krestor 
+   :image "images/krestor.jpg"
+   :power 240
+   :age 313
+   :size 373
+   :magic-level 167
+   :fright-factor 83
+   :allegiance :good
+   :series 7
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :madara 
+   :image "images/madara.jpg"
+   :power 245
+   :age 290
+   :size 256
+   :magic-level 173
+   :fright-factor 84
+   :allegiance :good
+   :series 7
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :ellik 
+   :image "images/ellik.jpg"
+   :power 247
+   :age 287
+   :size 380
+   :magic-level 177
+   :fright-factor 85
+   :allegiance :good
+   :series 7
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :carnivora 
+   :image "images/carnivora.jpg"
+   :power 250
+   :age 293
+   :size 262
+   :magic-level 180
+   :fright-factor 86
+   :allegiance :good
+   :series 7
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :balisk 
+   :image "images/balisk.jpg"
+   :power 237
+   :age 278
+   :size 333
+   :magic-level 171
+   :fright-factor 90
+   :allegiance :evil
+   :series 8
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :koron 
+   :image "images/koron.jpg"
+   :power 270
+   :age 389
+   :size 119
+   :magic-level 167
+   :fright-factor 94
+   :allegiance :evil
+   :series 8
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :hecton 
+   :image "images/hecton.jpg"
+   :power 294
+   :age 302
+   :size 101
+   :magic-level 188
+   :fright-factor 96
+   :allegiance :evil
+   :series 8
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :torno 
+   :image "images/torno.jpg"
+   :power 267
+   :age 256
+   :size 201
+   :magic-level 181
+   :fright-factor 91
+   :allegiance :evil
+   :series 8
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :kronus 
+   :image "images/kronus.jpg"
+   :power 280
+   :age 313
+   :size 307
+   :magic-level 191
+   :fright-factor 98
+   :allegiance :evil
+   :series 8
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :bloodboar 
+   :image "images/bloodboar.jpg"
+   :power 350
+   :age 233
+   :size 140
+   :magic-level 180
+   :fright-factor 86
+   :allegiance :evil
+   :series 8
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :ursus 
+   :image "images/ursus.jpg"
+   :power 271
+   :age 172
+   :size 300
+   :magic-level 179
+   :fright-factor 90
+   :allegiance :good
+   :series 9
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :minos 
+   :image "images/minos.jpg"
+   :power 273
+   :age 27
+   :size 295
+   :magic-level 176
+   :fright-factor 97
+   :allegiance :good
+   :series 9
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :koraka 
+   :image "images/koraka.jpg"
+   :power 260
+   :age 25
+   :size 101
+   :magic-level 167
+   :fright-factor 93
+   :allegiance :good
+   :series 9
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :silver 
+   :image "images/silver.jpg"
+   :power 270
+   :age 35
+   :size 237
+   :magic-level 150
+   :fright-factor 95
+   :allegiance :good
+   :series 9
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :spikefin 
+   :image "images/spikefin.jpg"
+   :power 250
+   :age 39
+   :size 220
+   :magic-level 180
+   :fright-factor 85
+   :allegiance :good
+   :series 9
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :torpix 
+   :image "images/torpix.jpg"
+   :power 280
+   :age 391
+   :size 442
+   :magic-level 171
+   :fright-factor 89
+   :allegiance :good
+   :series 9
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :noctila 
+   :image "images/noctila.jpg"
+   :power 210
+   :age 326
+   :size 121
+   :magic-level 145
+   :fright-factor 79
+   :allegiance :evil
+   :series 10
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :shamani 
+   :image "images/shamani.jpg"
+   :power 220
+   :age 330
+   :size 192
+   :magic-level 155
+   :fright-factor 82
+   :allegiance :evil
+   :series 10
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :lustor 
+   :image "images/lustor.jpg"
+   :power 235
+   :age 328
+   :size 247
+   :magic-level 159
+   :fright-factor 85
+   :allegiance :evil
+   :series 10
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :voltrex 
+   :image "images/voltrex.jpg"
+   :power 253
+   :age 325
+   :size 269
+   :magic-level 164
+   :fright-factor 80
+   :allegiance :evil
+   :series 10
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :tecton 
+   :image "images/tecton.jpg"
+   :power 208
+   :age 323
+   :size 304
+   :magic-level 132
+   :fright-factor 78
+   :allegiance :evil
+   :series 10
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :doomskull 
+   :image "images/doomskull.jpg"
+   :power 222
+   :age 339
+   :size 150
+   :magic-level 141
+   :fright-factor 83
+   :allegiance :evil
+   :series 10
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :elko 
+   :image "images/elko.jpg"
+   :power 286
+   :age 0
+   :size 287
+   :magic-level 188
+   :fright-factor 91
+   :allegiance :evil
+   :series 11
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :tarrok 
+   :image "images/tarrok.jpg"
+   :power 287
+   :age 0
+   :size 268
+   :magic-level 150
+   :fright-factor 89
+   :allegiance :evil
+   :series 11
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :brutus 
+   :image "images/brutus.jpg"
+   :power 285
+   :age 0
+   :size 244
+   :magic-level 189
+   :fright-factor 90
+   :allegiance :evil
+   :series 11
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :flaymar 
+   :image "images/flaymar.jpg"
+   :power 293
+   :age 0
+   :size 122
+   :magic-level 190
+   :fright-factor 91
+   :allegiance :evil
+   :series 11
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :serpio 
+   :image "images/serpio.jpg"
+   :power 284
+   :age 0
+   :size 327
+   :magic-level 180
+   :fright-factor 87
+   :allegiance :evil
+   :series 11
+   :book 5
+   :visible? true
+   :card-visible? false}
+ {:beast-name :tauron 
+   :image "images/tauron.jpg"
+   :power 296
+   :age 0
+   :size 281
+   :magic-level 155
+   :fright-factor 88
+   :allegiance :evil
+   :series 11
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :solak 
+   :image "images/solak.jpg"
+   :power 256
+   :age 399
+   :size 330
+   :magic-level 134
+   :fright-factor 89
+   :allegiance :evil
+   :series 12
+   :book 1
+   :visible? true
+   :card-visible? false}
+  {:beast-name :kajin 
+   :image "images/kajin.jpg"
+   :power 243
+   :age 399
+   :size 288
+   :magic-level 152
+   :fright-factor 87
+   :allegiance :evil
+   :series 12
+   :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :issrilla 
+   :image "images/issrilla.jpg"
+   :power 262
+   :age 340
+   :size 305
+   :magic-level 193
+   :fright-factor 93
+   :allegiance :evil
+   :series 12
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :vigrash 
+   :image "images/vigrash.jpg"
+   :power 258
+   :age 400
+   :size 252
+   :magic-level 130
+   :fright-factor 88
+   :allegiance :evil
+   :series 12
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :mirka 
+   :image "images/mirka.jpg"
+   :power 249
+   :age 386
+   :size 157
+   :magic-level 188
+   :fright-factor 90
+   :allegiance :evil
+   :series 12
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :kama 
+   :image "images/kama.jpg"
+   :power 254
+   :age 419
+   :size 105
+   :magic-level 146
+   :fright-factor 92
+   :allegiance :evil
+   :series 12
+   :book 6
+   :visible? true
+   :card-visible? false}
+  {:beast-name :skurik 
+   :image "images/skurik.jpg"
+   :power 196
+   :age 367
+   :size 304
+   :magic-level 137
+   :fright-factor 91
+   :allegiance :evil
+   :series 13
+   :book 1
    :visible? true
    :card-visible? false}
   {:beast-name :targro 
@@ -273,7 +885,56 @@
    :size 268
    :magic-level 134
    :fright-factor 89
+   :allegiance :evil
    :series 13
    :book 2
+   :visible? true
+   :card-visible? false}
+  {:beast-name :slivka 
+   :image "images/slivka.jpg"
+   :power 245
+   :age 371
+   :size 289
+   :magic-level 130
+   :fright-factor 90
+   :allegiance :evil
+   :series 13
+   :book 3
+   :visible? true
+   :card-visible? false}
+  {:beast-name :linka 
+   :image "images/linka.jpg"
+   :power 249
+   :age 390
+   :size 250
+   :magic-level 131
+   :fright-factor 92
+   :allegiance :evil
+   :series 13
+   :book 4
+   :visible? true
+   :card-visible? false}
+  {:beast-name :vermok 
+   :image "images/vermok.jpg"
+   :power 253
+   :age 377
+   :size 167
+   :magic-level 138
+   :fright-factor 95
+   :allegiance :evil
+   :series 13
+   :book 5
+   :visible? true
+   :card-visible? false}
+  {:beast-name :koba 
+   :image "images/koba.jpg"
+   :power 280
+   :age 400
+   :size 140
+   :magic-level 184
+   :fright-factor 93
+   :allegiance :evil
+   :series 13
+   :book 6
    :visible? true
    :card-visible? false}])
