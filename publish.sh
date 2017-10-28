@@ -2,12 +2,10 @@
 
 lein cljsbuild once
 cp -r resources/* ../
-git checkout deploy
+git checkout gh-pages
 cp -r ../public/* ./
 git add .
 git commit . -m "Publish"
-git push origin deploy
-git push deploy deploy:master
-git push deploy2 deploy:master
+git push origin gh-pages
 rm -rf ../public
 git checkout master
