@@ -91,7 +91,7 @@
 (defn render-beast
   [app {:keys [beast-name visible? card-visible?] :as beast}] 
   (when visible?
-    [:div.beast 
+    [:div.col-xl-4.col-lg-6.col-md-6.col-sm-12.col-12.beast
      {:key (name beast-name)
       :on-click (partial click-beast app beast-name)}
      (front-beast-view beast)
@@ -104,63 +104,61 @@
      
 (defn render-search
   [app]
-  [:div.search
-   [:input 
-    {:on-change (partial search app) 
-     :key "search"
-     :type "text" 
-     :placeholder "Search for a beast!"}]]) 
+  [:div.search.row
+   [:div.col-12
+    [:input 
+     {:on-change (partial search app) 
+      :key "search"
+      :type "text" 
+      :placeholder "Search for a beast!"}]]]) 
 
 (defn render-filters
   [app beasts]
-  [:div.filters 
+  [:div.filters.row 
    (let [series (sort-by identity (distinct (map :series beasts)))
          state @app]
-     (map (fn [s] [:input
-                   (let [filters (:filters state)
-                         css-class (if (some #{s} filters) "selected" "")]
-                     {:on-click (partial toggle-series-filter app s)
-                      :key (str "filter" s)
-                      :type "button" :value (str "Series "  s)
-                      :class css-class})]) series))])
+     (map (fn [s] [:div.col-12.col-sm-12.col-md-2
+                   [:input
+                    (let [filters (:filters state)
+                          css-class (if (some #{s} filters) "selected" "")]
+                      {:on-click (partial toggle-series-filter app s)
+                       :key (str "filter" s)
+                       :type "button" :value (str "Series "  s)
+                       :class css-class})]]) series))])
 
 (defn render-sorts
   [app beasts]
-  [:div.sorts 
+  [:div.sorts.row
    (let [attributes [:age :size :power :magic-level :fright-factor :total :allegiance]
          state @app]
-     (map (fn [s] [:input
-                   (let [srt-by (:sort-by state)
-                         css-class (if (= srt-by s) "selected" "")]
-                     {:on-click (partial toggle-sort app s)
-                      :key (str "sort" s)
-                      :type "button" :value (str "Sort by "  (name s))
-                      :class css-class})]) attributes))])
+     (map (fn [s] [:div.col-12.col-sm-12.col-md-2
+                   [:input
+                    (let [srt-by (:sort-by state)
+                          css-class (if (= srt-by s) "selected" "")]
+                      {:on-click (partial toggle-sort app s)
+                       :key (str "sort" s)
+                       :type "button" :value (str "By "  (name s))
+                       :class css-class})]]) attributes))])
 
 (defn beasts 
   [app]
   (let [{:keys [title beasts]} @app]
     [:div.main
      {:key "main"}
-     [:div.logo 
-      [:img {:src "images/card.png" }]]
-     [:div.cp 
-      (render-search app)
-     [:div 
-      {:key "filters"}
-      [:div.intro 
-       [:div.text
-        [:p "Hi, I'm Tom!"] 
-        [:p "I'm on a secret quest to battle Malvel and his evil beasts across Avantia and beyond!"]
-        [:p "Help me find the strongest and most ferocious beasts as we go on this journey together!"]
-        [:p "Good luck!"]]]
-      (render-filters app beasts)]
-     [:div 
-      {:key "sorts"}
-      (render-sorts app beasts)]]
-     [:div.beasts
-      {:key "beasts"} 
-      (map (partial render-beast app) beasts)]]))
+     [:div
+      [:div.logo
+       [:img {:src "images/card.png" }]]]
+       [:div.cp 
+        (render-search app)
+       [:div 
+        {:key "filters"}
+        (render-filters app beasts)]
+       [:div 
+        {:key "sorts"}
+        (render-sorts app beasts)]]
+       [:div.beasts.row
+        {:key "beasts"} 
+        (map (partial render-beast app) beasts)]]))
 
 (defonce element (. js/document (getElementById "app")))
 (r/render-component [beasts app-state] element)
