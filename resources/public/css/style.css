@@ -1,6 +1,8 @@
 /* some style */
 body {
   background-color:#333;
+  padding:0;
+  margin:0;
 }
 
 .clear {
@@ -8,16 +10,15 @@ body {
 }
 
 .main {
-  background-repeat:no-repeat;
-  background-position:center;
   background-attachment:fixed;
   background-image:url('../images/mainbg.jpg');
+  background-size:cover;
   min-height:1500px;
   padding-bottom:50px;
-  width:90%;
-  margin-left:auto;
-  margin-right:auto;
-  max-width: 1100px;
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  max-width: 1600px;
 }
 
 .logo {
@@ -31,6 +32,8 @@ body {
 
 .search {
   margin-top:50px;
+  padding:0;
+  margin:0;
 }
 
 .search > div > input {
@@ -107,6 +110,7 @@ body {
 
 .beasts {
   margin-left:8px;
+  margin-right:8px;
   margin-top:50px;
 }
 
@@ -138,9 +142,9 @@ h2.score > span {
 }
 
 .beast {
-  height:528px;
+  height:598px;
+  width:398px;
   float:left;
-  width:348px;
   margin:0px 0px 8px 0px;
 }
 
@@ -163,17 +167,17 @@ h2.score > span {
 
 .front {
   float:right;
-  height:528px;
-  width:348px;
+  height:598px;
+  width:398px;
   box-shadow: -2px 2px 2px #aaa;
   border-radius: 15px 15px 15px 15px;
 }
 
 .back {
-  width:352px;
-  padding:186px 0px 0px 2px;
-  background-position-x:10px;
-  background-position-y:28px;
+  padding:256px 0px 0px 2px;
+  width:398px;
+  background-position-x:40px;
+  background-position-y:38px;
   background-repeat:no-repeat;
   background-image:url('../images/card.png');
   border:2px solid #CCC;
