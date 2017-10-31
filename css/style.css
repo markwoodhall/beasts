@@ -12,7 +12,7 @@ body {
 .main {
   background-attachment:fixed;
   background-image:url('../images/mainbg.jpg');
-  background-size:cover;
+  background-size:contain;
   min-height:1500px;
   padding-bottom:50px;
   width:100%;
